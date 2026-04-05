@@ -14,25 +14,25 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-5 transition-all duration-400 ${
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 transition-all duration-400 ${
         scrolled
-          ? 'bg-cream/94 backdrop-blur-md shadow-sm'
+          ? 'bg-cream/95 backdrop-blur-md shadow-sm'
           : 'bg-transparent'
       }`}
     >
       <a href="#" className="flex items-center gap-3 no-underline">
-        <Image
-          src="/images/image_2.png"
-          alt="Vistas & Vibes"
-          width={48}
-          height={48}
-          className={`rounded-full object-contain transition-all duration-400 ${
-            scrolled ? '' : 'drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]'
-          }`}
-        />
+        {/* Circular crop removes the grey square from the PNG */}
+        <span className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 block">
+          <Image
+            src="/images/image_2.png"
+            alt="Vistas & Vibes logo"
+            fill
+            className="object-cover scale-[0.88]"
+          />
+        </span>
         <span
-          className={`font-serif text-xl tracking-wide transition-colors duration-400 hidden sm:block ${
-            scrolled ? 'text-bark' : 'text-white'
+          className={`font-serif text-2xl tracking-wide transition-colors duration-400 hidden sm:block ${
+            scrolled ? 'text-bark' : 'text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]'
           }`}
         >
           Vistas &amp; Vibes
