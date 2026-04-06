@@ -300,13 +300,12 @@ export default function Home() {
       {/* ── FOOTER ─────────────────────────────────────────────────────────── */}
       <footer className="bg-ocean py-12 px-6 text-center">
         <div className="flex justify-center mb-5">
-          <span className="relative w-12 h-12 rounded-full overflow-hidden block">
+          <span className="relative w-12 h-12 block">
             <Image
               src="/images/image_2.png"
               alt="Vistas & Vibes"
               fill
-              className="object-cover scale-[0.88]"
-              style={{ mixBlendMode: 'screen' }}
+              className="object-contain"
             />
           </span>
         </div>

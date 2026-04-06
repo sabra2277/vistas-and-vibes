@@ -27,14 +27,14 @@ export default function Nav() {
       {/* Brand */}
       <a href="#" className="flex items-center gap-4 no-underline">
         <span
-          className="relative shrink-0 block rounded-full overflow-hidden transition-all duration-300"
+          className="relative shrink-0 block transition-all duration-300"
           style={{ width: scrolled ? '80px' : '110px', height: scrolled ? '80px' : '110px' }}
         >
           <Image
             src="/images/image_2.png"
             alt="Vistas & Vibes"
             fill
-            className="object-cover scale-[1.15]"
+            className="object-contain"
           />
         </span>
         <span
