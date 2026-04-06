@@ -16,16 +16,29 @@ export default function DatesSection() {
   return (
     <section id="dates" className="bg-ivory-mid py-24 px-6">
       <div className="max-w-[1100px] mx-auto">
+        {/* The Invitation */}
+        <div className="max-w-xl mb-16">
+          <p className="text-[0.65rem] tracking-[0.22em] uppercase font-semibold text-gold mb-4">
+            The Invitation
+          </p>
+          <h2 className="font-heading text-4xl md:text-5xl text-ocean mb-4 leading-tight">
+            Your seat at the table is waiting.
+          </h2>
+          <div className="w-12 h-px bg-gold mb-7" />
+          <div className="space-y-4 text-text-soft text-base leading-relaxed font-light">
+            <p>
+              The best things are discovered organically. Because this is a small-group experience in a private villa, we keep the circle intentionally intimate to ensure the energy is always just right.
+            </p>
+            <p>
+              Join the invitation list to be the first to hear about our confirmed dates, new coastal discoveries, and when the next few spots open up.
+            </p>
+          </div>
+        </div>
+
+        {/* Date cards */}
         <p className="text-[0.65rem] tracking-[0.22em] uppercase font-semibold text-gold mb-4">
           Upcoming dates
         </p>
-        <h2 className="font-heading text-4xl md:text-5xl text-ocean mb-4 leading-tight">
-          Reserve your spot.
-        </h2>
-        <p className="text-text-soft text-sm leading-relaxed mb-12 max-w-md">
-          These buttons lead directly to the invitation list. Spots are limited.
-        </p>
-
         <div className="grid md:grid-cols-3 gap-5">
           {dates.map((d) => (
             <div

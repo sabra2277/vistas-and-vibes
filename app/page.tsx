@@ -42,13 +42,13 @@ export default function Home() {
       {/* ── MARQUEE ────────────────────────────────────────────────────────── */}
       <Marquee />
 
-      {/* ── THE UN-RETREAT ─────────────────────────────────────────────────── */}
+      {/* ── THE EXPERIENCE ─────────────────────────────────────────────────── */}
       <section className="bg-ivory py-24 px-6" id="experience">
         <div className="max-w-[1100px] mx-auto">
           {/* Header */}
           <div className="max-w-2xl mb-16">
             <p className="text-sm tracking-[0.14em] uppercase font-semibold text-gold mb-5">
-              The Un-Retreat
+              The Experience
             </p>
             <h2 className="font-heading text-4xl md:text-5xl text-ocean leading-tight mb-3">
               An elevated, five-night escape
@@ -76,13 +76,10 @@ export default function Home() {
               <div className="w-12 h-px bg-gold mb-7" />
               <div className="space-y-5 text-text-soft text-base leading-relaxed font-light">
                 <p>
-                  We invite you to come exactly as you are — which means no sunrise workouts, no &ldquo;finding yourself&rdquo; in a drum circle, and zero expectation to return as a &ldquo;better version&rdquo; of you. We think you&apos;re actually great as you are.
+                  Escape the ordinary with an elevated, five-night journey for women fully immersed in their lives. This is a bespoke escape for those who want more space, more quiet adventure, and more moments to simply pause. Imagine mornings spent trying something new — perhaps a surf lesson with peers your own age or a horseback ride along the shore — where the only person you have to consider is yourself. There are no children to coordinate, no schedules to manage; just the freedom to tap into your most uninhibited self.
                 </p>
                 <p>
-                  Here, there is no &ldquo;too old&rdquo; nor &ldquo;fit enough.&rdquo; There is only a beautiful villa, a small group of peers, and the rarest luxury of all: the freedom to exist without an audience.
-                </p>
-                <p>
-                  Whether you are seeking a new adventure or a quiet afternoon by the pool, this is your safe harbor — a place with no one to care for, no one to answer to, and the effortless ease of a life lived entirely for you.
+                  Between authentic cooking classes and sunset mezcal tastings, you&apos;ll explore the hidden soul of the Oaxaca coast organically, as if you&apos;re being shown the secret spots of a best friend. Whether you are dancing under the stars or retreating to the sophisticated luxury of your villa, this is your time to rediscover the world on your own terms. It is an invitation to wander, to taste, and to finally exhale.
                 </p>
               </div>
             </div>
@@ -90,13 +87,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── THE EXPERIENCE ─────────────────────────────────────────────────── */}
+      {/* ── THE UN-RETREAT ─────────────────────────────────────────────────── */}
       <section className="bg-ivory-mid py-24 px-6">
         <div className="max-w-[1100px] mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
               <p className="text-sm tracking-[0.14em] uppercase font-semibold text-gold mb-5">
-                The Experience
+                The Un-Retreat
               </p>
               <h2 className="font-heading text-4xl md:text-5xl text-ocean leading-tight mb-6">
                 Have fun. Feel free.<br />
@@ -105,10 +102,13 @@ export default function Home() {
               <div className="w-12 h-px bg-gold mb-7" />
               <div className="space-y-5 text-text-soft text-base leading-relaxed font-light">
                 <p>
-                  This isn&apos;t a guru-led workshop, and we won&apos;t ask you to find your life purpose in a yoga pose. You won&apos;t be sitting in a circle sharing your life story with strangers — unless, of course, that happens naturally over a third glass of wine.
+                  We invite you to come exactly as you are — which means no sunrise workouts, no &ldquo;finding yourself&rdquo; in a drum circle, and zero expectation to return as a &ldquo;better version&rdquo; of you. We think you&apos;re actually great as you are.
                 </p>
                 <p>
-                  You aren&apos;t here to &ldquo;do the work&rdquo; or &ldquo;detox.&rdquo; You&apos;re here because you&apos;ve earned something better: the space to simply be.
+                  Here, there is no &ldquo;too old&rdquo; nor &ldquo;fit enough.&rdquo; There is only a beautiful villa, a small group of peers, and the rarest luxury of all: the freedom to exist without an audience.
+                </p>
+                <p>
+                  Whether you are seeking a new adventure or a quiet afternoon by the pool, this is your safe harbor — a place with no one to care for, no one to answer to, and the effortless ease of a life lived entirely for you.
                 </p>
               </div>
             </div>
@@ -204,30 +204,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SERVICE ────────────────────────────────────────────────────────── */}
-      <section className="bg-ivory-mid py-24 px-6">
-        <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-sm tracking-[0.14em] uppercase font-semibold text-gold mb-5">
-              Service
-            </p>
-            <p className="font-heading text-3xl md:text-4xl text-ocean leading-snug mb-6">
-              Go out. Stay out.<br />Say yes to the plans you didn&apos;t overthink.
-            </p>
-            <p className="text-text-soft text-base leading-relaxed font-light">
-              You&apos;re not doing this alone. I&apos;m always nearby ensuring everything runs smoothly — whether it&apos;s arranging a private driver, helping you navigate the local scene, or making sure you get back to the villa safely after a night of dancing.
-            </p>
-          </div>
-          <div>
-            <blockquote className="font-heading italic text-ocean text-2xl md:text-3xl leading-snug border-l-2 border-gold pl-7">
-              Have the adventure. Feel the warmth. Everything else is handled.
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
       {/* ── ABOUT ──────────────────────────────────────────────────────────── */}
-      <section className="bg-ivory py-24 px-6" id="about">
+      <section className="bg-ivory-mid py-24 px-6" id="about">
         <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="relative h-[420px] md:h-[560px] overflow-hidden">
             <Image
@@ -267,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* ── COMMON CURIOSITIES ─────────────────────────────────────────────── */}
-      <section className="bg-ivory-mid py-24 px-6">
+      <section className="bg-ivory py-24 px-6">
         <div className="max-w-[880px] mx-auto">
           <p className="text-sm tracking-[0.14em] uppercase font-semibold text-gold mb-10">
             Common curiosities
