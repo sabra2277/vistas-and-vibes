@@ -12,42 +12,65 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  const linkClass = `text-[0.7rem] tracking-[0.18em] uppercase font-medium transition-colors duration-250 ${
+    scrolled ? 'text-text-soft hover:text-coral' : 'text-white/70 hover:text-coral'
+  }`
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 transition-all duration-400 ${
+      className={`fixed top-0 left-0 right-0 z-[300] flex items-center justify-between transition-all duration-400 ${
         scrolled
-          ? 'bg-cream/95 backdrop-blur-md shadow-sm'
-          : 'bg-transparent'
+          ? 'bg-ivory/96 backdrop-blur-lg shadow-[0_1px_0_rgba(30,58,82,0.07)] px-[2.8rem] py-4'
+          : 'bg-transparent px-[2.8rem] py-6'
       }`}
     >
+      {/* Brand */}
       <a href="#" className="flex items-center gap-3 no-underline">
-        {/* Circular crop removes the grey square from the PNG */}
-        <span className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 block">
+        <span
+          className={`relative rounded-full overflow-hidden shrink-0 block transition-all duration-300 ${
+            scrolled ? 'w-11 h-11' : 'w-14 h-14'
+          }`}
+        >
           <Image
             src="/images/image_2.png"
-            alt="Vistas & Vibes logo"
+            alt="Vistas & Vibes"
             fill
             className="object-cover scale-[0.88]"
           />
         </span>
         <span
-          className={`font-serif text-2xl tracking-wide transition-colors duration-400 hidden sm:block ${
-            scrolled ? 'text-bark' : 'text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]'
+          className={`font-heading tracking-wide transition-all duration-400 hidden sm:block ${
+            scrolled ? 'text-ocean text-xl' : 'text-white text-2xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]'
           }`}
         >
           Vistas &amp; Vibes
         </span>
       </a>
 
+      {/* Nav links — hidden on mobile */}
+      <ul className="hidden md:flex items-center gap-9 list-none">
+        {[
+          { label: 'Experience', href: '#experience' },
+          { label: 'The Stay',   href: '#stay' },
+          { label: 'About',      href: '#about' },
+          { label: 'Inquire',    href: '#dates' },
+        ].map((l) => (
+          <li key={l.label}>
+            <a href={l.href} className={linkClass}>{l.label}</a>
+          </li>
+        ))}
+      </ul>
+
+      {/* CTA */}
       <a
         href="#dates"
-        className={`text-[0.7rem] font-medium tracking-[0.14em] uppercase px-5 py-2.5 border rounded-sm transition-all duration-250 ${
+        className={`text-[0.68rem] tracking-[0.16em] uppercase font-medium px-5 py-2 border transition-all duration-300 ${
           scrolled
-            ? 'bg-terracotta text-white border-terracotta hover:bg-bark hover:border-bark'
-            : 'text-white border-white/60 hover:bg-white/15'
+            ? 'border-ocean text-ocean hover:bg-coral hover:border-coral hover:text-white'
+            : 'border-white/50 text-white hover:bg-coral hover:border-coral'
         }`}
       >
-        See Upcoming Dates
+        Join the Invitation List
       </a>
     </nav>
   )

@@ -1,34 +1,26 @@
 import type { Metadata } from 'next'
-import { DM_Sans, DM_Serif_Display, Lora } from 'next/font/google'
+import { Jost, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 
-const dmSans = DM_Sans({
+const jost = Jost({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
+  weight: ['300', '400', '500', '600'],
   variable: '--font-sans',
   display: 'swap',
 })
 
-const dmSerif = DM_Serif_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['300', '400', '500'],
   style: ['normal', 'italic'],
-  variable: '--font-serif',
-  display: 'swap',
-})
-
-const lora = Lora({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  style: ['normal', 'italic'],
-  variable: '--font-lora',
+  variable: '--font-heading',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: 'Vistas & Vibes — A Curated Adventure on the Oaxaca Coast',
   description:
-    'Not a retreat. A curated adventure — elevated, indulgent, and thoughtfully designed for you. Private villa, small group, Oaxaca Coast.',
+    'Not a retreat. A curated adventure — elevated, indulgent, and thoughtfully designed for you.',
   openGraph: {
     title: 'Vistas & Vibes',
     description: 'Not a retreat. A curated adventure.',
@@ -41,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${dmSerif.variable} ${lora.variable}`}>
+    <html lang="en" className={`${jost.variable} ${cormorant.variable}`}>
       <body>{children}</body>
     </html>
   )

@@ -4,9 +4,9 @@ import { useState } from 'react'
 import JoinModal from './JoinModal'
 
 const dates = [
-  { id: 'july',    month: 'Mid July',    label: 'Mid July 2025' },
+  { id: 'july',    month: 'Mid-July',     label: 'Mid-July 2025' },
   { id: 'august',  month: 'Early August', label: 'Early August 2025' },
-  { id: 'october', month: 'Mid October',  label: 'Mid October 2025' },
+  { id: 'october', month: 'Mid-October',  label: 'Mid-October 2025' },
 ]
 
 export default function DatesSection() {
@@ -14,55 +14,42 @@ export default function DatesSection() {
   const selected = dates.find((d) => d.id === activeDate)
 
   return (
-    <section id="dates" className="bg-warm py-24 px-6">
-      <div className="max-w-3xl mx-auto text-center mb-14">
-        <p className="text-xs font-medium tracking-[0.16em] uppercase text-terracotta mb-4">
-          Upcoming Dates
+    <section id="dates" className="bg-ivory-mid py-24 px-6">
+      <div className="max-w-[1100px] mx-auto">
+        <p className="text-[0.65rem] tracking-[0.22em] uppercase font-semibold text-gold mb-4">
+          Upcoming dates
         </p>
-        <h2 className="font-serif text-4xl md:text-5xl text-bark leading-tight mb-5">
-          Spaces are limited.
+        <h2 className="font-heading text-4xl md:text-5xl text-ocean mb-4 leading-tight">
+          Reserve your spot.
         </h2>
-        <p className="text-text-soft text-base leading-relaxed max-w-xl mx-auto">
-          Each trip is kept intentionally small — just enough women to make it feel social,
-          never overwhelming. Spots go fast.
+        <p className="text-text-soft text-sm leading-relaxed mb-12 max-w-md">
+          These buttons lead directly to the invitation list. Spots are limited.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-5">
+          {dates.map((d) => (
+            <div
+              key={d.id}
+              className="bg-white border border-ivory-deep rounded-sm px-7 py-8 flex flex-col gap-3 shadow-sm"
+            >
+              <span className="font-heading text-3xl text-ocean">{d.month}</span>
+              <p className="text-xs tracking-[0.12em] text-text-soft uppercase">
+                Puerto Escondido, Oaxaca Coast
+              </p>
+              <button
+                onClick={() => setActiveDate(d.id)}
+                className="mt-2 text-left text-sm font-medium text-coral hover:text-ocean transition-colors tracking-wide"
+              >
+                Join the Invitation List →
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-10 text-[0.8rem] text-text-soft italic">
+          To inquire: 1-847-208-0419 · @VistasandVibesco
         </p>
       </div>
-
-      <div className="max-w-3xl mx-auto grid gap-5 md:grid-cols-3">
-        {dates.map((d) => (
-          <div
-            key={d.id}
-            className="bg-white border border-sand rounded-sm px-6 py-8 flex flex-col items-center text-center shadow-sm"
-          >
-            <p className="font-serif text-3xl text-bark mb-2">{d.month}</p>
-            <p className="text-sm text-text-soft tracking-wide mb-7">
-              Puerto Escondido, Oaxaca Coast
-            </p>
-            <button
-              onClick={() => setActiveDate(d.id)}
-              className="w-full text-xs font-medium tracking-[0.14em] uppercase py-3 bg-terracotta text-white rounded-sm hover:bg-bark transition-colors"
-            >
-              Join the list
-            </button>
-          </div>
-        ))}
-      </div>
-
-      <p className="text-center text-text-soft text-xs mt-10">
-        Questions? Reach Alex directly:{' '}
-        <a href="tel:18472080419" className="text-terracotta hover:underline">
-          1-847-208-0419
-        </a>
-        {' '}·{' '}
-        <a
-          href="https://instagram.com/VistasandVibesco"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-terracotta hover:underline"
-        >
-          @VistasandVibesco
-        </a>
-      </p>
 
       {selected && (
         <JoinModal date={selected.label} onClose={() => setActiveDate(null)} />

@@ -27,11 +27,7 @@ export default function JoinModal({ date, onClose }: Props) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, date }),
       })
-      if (res.ok) {
-        setStatus('done')
-      } else {
-        setStatus('error')
-      }
+      setStatus(res.ok ? 'done' : 'error')
     } catch {
       setStatus('error')
     }
@@ -40,13 +36,13 @@ export default function JoinModal({ date, onClose }: Props) {
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-bark/60 backdrop-blur-sm"
+      className="fixed inset-0 z-[400] flex items-center justify-center p-4 bg-ocean/60 backdrop-blur-sm"
       onClick={(e) => { if (e.target === overlayRef.current) onClose() }}
     >
-      <div className="bg-cream w-full max-w-md rounded-sm shadow-2xl px-8 py-8 relative">
+      <div className="bg-ivory w-full max-w-md rounded-sm shadow-2xl px-8 py-8 relative">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-text-soft hover:text-bark text-2xl leading-none"
+          className="absolute top-4 right-4 text-text-soft hover:text-ocean text-2xl leading-none"
           aria-label="Close"
         >
           &times;
@@ -54,29 +50,29 @@ export default function JoinModal({ date, onClose }: Props) {
 
         {status === 'done' ? (
           <div className="text-center py-4">
-            <p className="font-serif text-2xl text-bark mb-3">You&apos;re on the list.</p>
+            <p className="font-heading text-2xl text-ocean mb-3">You&apos;re on the list.</p>
             <p className="text-text-soft text-sm leading-relaxed">
-              Alex will reach out personally with details as soon as spots open up.
+              Alex will reach out personally with details as spots open up.
               Can&apos;t wait to have you there.
             </p>
             <button
               onClick={onClose}
-              className="mt-6 text-xs font-medium tracking-[0.12em] uppercase px-6 py-2.5 bg-terracotta text-white rounded-sm hover:bg-bark transition-colors"
+              className="mt-6 text-xs font-medium tracking-[0.12em] uppercase px-6 py-2.5 bg-coral text-white hover:bg-ocean transition-colors"
             >
               Close
             </button>
           </div>
         ) : (
           <>
-            <p className="font-serif text-2xl text-bark mb-1">Join the list</p>
+            <p className="font-heading text-2xl text-ocean mb-1">Join the Invitation List</p>
             <p className="text-text-soft text-sm mb-6 leading-relaxed">
-              <span className="font-medium text-terracotta">{date}</span>
+              <span className="font-medium text-coral">{date}</span>
               <br />
               Spaces are very limited. Alex will be in touch personally.
             </p>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-xs font-medium text-text-soft mb-1 tracking-wide uppercase">
+                <label className="block text-[0.65rem] font-semibold text-text-soft mb-1 tracking-[0.12em] uppercase">
                   Your name
                 </label>
                 <input
@@ -85,11 +81,11 @@ export default function JoinModal({ date, onClose }: Props) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="First name is fine"
-                  className="w-full border border-stone rounded-sm px-4 py-2.5 text-sm text-bark bg-white focus:outline-none focus:ring-1 focus:ring-terracotta placeholder:text-stone"
+                  className="w-full border border-ivory-deep rounded-sm px-4 py-2.5 text-sm text-ocean bg-white focus:outline-none focus:ring-1 focus:ring-ocean placeholder:text-text-soft/50"
                 />
               </div>
               <div>
-                <label className="block text-xs font-medium text-text-soft mb-1 tracking-wide uppercase">
+                <label className="block text-[0.65rem] font-semibold text-text-soft mb-1 tracking-[0.12em] uppercase">
                   Email address
                 </label>
                 <input
@@ -98,16 +94,16 @@ export default function JoinModal({ date, onClose }: Props) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="w-full border border-stone rounded-sm px-4 py-2.5 text-sm text-bark bg-white focus:outline-none focus:ring-1 focus:ring-terracotta placeholder:text-stone"
+                  className="w-full border border-ivory-deep rounded-sm px-4 py-2.5 text-sm text-ocean bg-white focus:outline-none focus:ring-1 focus:ring-ocean placeholder:text-text-soft/50"
                 />
               </div>
               {status === 'error' && (
-                <p className="text-xs text-red-600">Something went wrong. Try again or email Alex directly.</p>
+                <p className="text-xs text-coral">Something went wrong. Please try again.</p>
               )}
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full bg-terracotta text-white text-xs font-medium tracking-[0.12em] uppercase py-3 rounded-sm hover:bg-bark transition-colors disabled:opacity-60"
+                className="w-full bg-coral text-white text-xs font-medium tracking-[0.14em] uppercase py-3 hover:bg-ocean transition-colors disabled:opacity-60"
               >
                 {status === 'loading' ? 'Sending…' : 'Reserve My Spot'}
               </button>
