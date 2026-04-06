@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     const notifyResult = await resend.emails.send({
       from: 'Vistas & Vibes <onboarding@resend.dev>',
       to: 'alextreyger19@gmail.com',
-      reply_to: email,
+      replyTo: email,
       subject: `New invitation list signup — ${date}`,
       html: `
         <p>Hi Alex,</p>
