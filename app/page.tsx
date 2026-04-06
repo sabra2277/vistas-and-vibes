@@ -266,37 +266,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CLOSING ────────────────────────────────────────────────────────── */}
-      <section className="relative bg-gradient-to-b from-ocean via-ocean-mid to-ocean py-28 px-6 overflow-hidden">
-        {/* Subtle decorative glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(196,169,106,0.06)_0%,transparent_70%)]" />
-
-        <div className="relative max-w-[780px] mx-auto text-center">
-          <h2 className="font-heading text-5xl md:text-7xl text-ivory font-light italic leading-tight mb-4">
-            Join the Next Escape
-          </h2>
-          <p className="text-ivory/50 text-sm tracking-wide mb-10 font-light">
-            Your invitation to something extraordinary
-          </p>
-
-          <div className="w-12 h-px bg-gold/40 mx-auto mb-10" />
-
-          <p className="text-ivory/70 text-base md:text-lg leading-relaxed mb-5 font-light max-w-xl mx-auto">
-            A stunning location, a small group of like-minded women, and days designed entirely around ease and pleasure.
-          </p>
-          <p className="text-ivory/55 text-base leading-relaxed mb-12 font-light max-w-xl mx-auto">
-            Spots are limited and these windows don&apos;t stay open for long. If you feel that pull toward the coast — that&apos;s your answer.
-          </p>
-
-          <a
-            href="#dates"
-            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-10 py-4 bg-gold text-ocean hover:bg-gold-lt transition-colors rounded-full"
-          >
-            Join the Invitation List
-          </a>
-        </div>
-      </section>
-
       {/* ── UPCOMING DATES ─────────────────────────────────────────────────── */}
       <DatesSection />
 
