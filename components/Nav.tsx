@@ -69,7 +69,7 @@ export default function Nav() {
             : 'bg-gold/90 text-ocean border border-gold/0 hover:bg-gold hover:text-ocean'
         }`}
       >
-        Join the Invitation List
+        Request Your Invitation
       </a>
     </nav>
   )

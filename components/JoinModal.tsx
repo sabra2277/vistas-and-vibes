@@ -64,7 +64,7 @@ export default function JoinModal({ date, onClose }: Props) {
           </div>
         ) : (
           <>
-            <p className="font-heading text-2xl text-ocean mb-1">Join the Invitation List</p>
+            <p className="font-heading text-2xl text-ocean mb-1">Request Your Invitation</p>
             <p className="text-text-soft text-sm mb-6 leading-relaxed">
               <span className="font-medium text-coral">{date}</span>
               <br />

@@ -34,7 +34,7 @@ export default function Home() {
             href="#dates"
             className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
           >
-            Join the Invitation List
+            Request Your Invitation
           </a>
         </div>
       </section>
@@ -189,7 +189,7 @@ export default function Home() {
                 href="#dates"
                 className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
               >
-                Join the Invitation List
+                Apply for the Next Experience
               </a>
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function Home() {
               href="#dates"
               className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
             >
-              Join the Invitation List
+              Apply for the Next Experience
             </a>
           </div>
         </div>
