@@ -39,3 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+*.jpg:Zone.Identifier
+*.png:Zone.Identifier
