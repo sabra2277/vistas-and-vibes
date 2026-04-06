@@ -28,7 +28,7 @@ export default function Nav() {
       <a href="#" className="flex items-center gap-4 no-underline">
         <span
           className="relative shrink-0 block transition-all duration-300"
-          style={{ width: scrolled ? '80px' : '110px', height: scrolled ? '80px' : '110px' }}
+          style={{ width: scrolled ? '90px' : '130px', height: scrolled ? '90px' : '130px' }}
         >
           <Image
             src="/images/image_2.png"

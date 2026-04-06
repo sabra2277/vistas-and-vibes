@@ -267,27 +267,30 @@ export default function Home() {
       </section>
 
       {/* ── CLOSING ────────────────────────────────────────────────────────── */}
-      <section className="bg-ocean py-24 px-6">
-        <div className="max-w-[720px] mx-auto text-center">
-          <p className="text-[0.65rem] tracking-[0.22em] uppercase font-semibold text-gold mb-6">
-            Join the next escape
-          </p>
-          <h2 className="font-heading text-4xl md:text-6xl text-ivory font-light leading-tight mb-6">
-            The kind of trip you don&apos;t overthink—<em>you just go.</em>
+      <section className="relative bg-gradient-to-b from-ocean via-ocean-mid to-ocean py-28 px-6 overflow-hidden">
+        {/* Subtle decorative glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(196,169,106,0.06)_0%,transparent_70%)]" />
+
+        <div className="relative max-w-[780px] mx-auto text-center">
+          <h2 className="font-heading text-5xl md:text-7xl text-ivory font-light italic leading-tight mb-4">
+            Join the Next Escape
           </h2>
-          <p className="text-ivory/65 text-base leading-relaxed mb-5 font-light">
+          <p className="text-ivory/50 text-sm tracking-wide mb-10 font-light">
+            Your invitation to something extraordinary
+          </p>
+
+          <div className="w-12 h-px bg-gold/40 mx-auto mb-10" />
+
+          <p className="text-ivory/70 text-base md:text-lg leading-relaxed mb-5 font-light max-w-xl mx-auto">
             A stunning location, a small group of like-minded women, and days designed entirely around ease and pleasure.
           </p>
-          <p className="text-ivory/65 text-base leading-relaxed mb-10 font-light">
-            Spots are limited, and these windows don&apos;t stay open for long. If you feel that pull toward the coast—that&apos;s your answer.
+          <p className="text-ivory/55 text-base leading-relaxed mb-12 font-light max-w-xl mx-auto">
+            Spots are limited and these windows don&apos;t stay open for long. If you feel that pull toward the coast — that&apos;s your answer.
           </p>
-          <p className="font-heading italic text-gold text-2xl mb-4">Why Wouldn&apos;t You?</p>
-          <p className="text-ivory/55 text-sm leading-relaxed mb-10 font-light max-w-lg mx-auto">
-            There&apos;s a point where it all just feels easy. You&apos;re in a beautiful place, with the right people, and everything just works. It&apos;s not about changing your life; it&apos;s about feeling really, really good for a few days.
-          </p>
+
           <a
             href="#dates"
-            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-4 bg-gold text-ocean hover:bg-ivory transition-colors rounded-full"
+            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-10 py-4 bg-gold text-ocean hover:bg-gold-lt transition-colors rounded-full"
           >
             Join the Invitation List
           </a>
