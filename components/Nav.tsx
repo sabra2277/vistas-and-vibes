@@ -28,14 +28,15 @@ export default function Nav() {
       <a href="#" className="flex items-center gap-3 no-underline">
         {/* mix-blend-mode removes the grey/white PNG background against both dark and light nav */}
         <span
-          className="relative rounded-full overflow-hidden shrink-0 block transition-all duration-300 bg-white shadow-sm"
-          style={{ width: scrolled ? '56px' : '64px', height: scrolled ? '56px' : '64px' }}
+          className="relative rounded-full overflow-hidden shrink-0 block transition-all duration-300"
+          style={{ width: scrolled ? '68px' : '88px', height: scrolled ? '68px' : '88px' }}
         >
           <Image
             src="/images/image_2.png"
             alt="Vistas & Vibes"
             fill
-            className="object-cover scale-[0.92]"
+            className="object-cover scale-[0.96]"
+            style={{ mixBlendMode: 'multiply' }}
           />
         </span>
         <span
@@ -66,8 +67,8 @@ export default function Nav() {
         href="#dates"
         className={`text-[0.68rem] tracking-[0.16em] uppercase font-medium px-5 py-2 border rounded-full transition-all duration-300 ${
           scrolled
-            ? 'border-ocean text-ocean hover:bg-coral hover:border-coral hover:text-white'
-            : 'border-white/50 text-white hover:bg-coral hover:border-coral'
+            ? 'border-gold text-gold hover:bg-gold hover:text-ocean'
+            : 'border-gold/70 text-gold hover:bg-gold hover:text-ocean'
         }`}
       >
         Join the Invitation List

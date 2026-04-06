@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
     // Notify Alex — sent from Resend's default domain (no custom domain needed)
     const notifyResult = await resend.emails.send({
-      from: 'Vistas & Vibes <onboarding@resend.dev>',
+      from: 'Vistas & Vibes <hello@vistasandvibes.com>',
       to: 'alextreyger19@gmail.com',
       replyTo: email,
       subject: `New invitation list signup — ${date}`,
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
 
     // Auto-reply to the person who signed up
     const replyResult = await resend.emails.send({
-      from: 'Vistas & Vibes <onboarding@resend.dev>',
+      from: 'Vistas & Vibes <hello@vistasandvibes.com>',
       to: email,
       subject: `You're on the list — Vistas & Vibes`,
       html: `

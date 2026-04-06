@@ -32,7 +32,7 @@ export default function Home() {
           </p>
           <a
             href="#dates"
-            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-coral text-white hover:bg-ocean transition-colors rounded-full"
+            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
           >
             Join the Invitation List
           </a>
@@ -187,7 +187,7 @@ export default function Home() {
             <div>
               <a
                 href="#dates"
-                className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-coral text-white hover:bg-ocean transition-colors rounded-full"
+                className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
               >
                 Join the Invitation List
               </a>
@@ -248,7 +248,7 @@ export default function Home() {
             </blockquote>
             <a
               href="#dates"
-              className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-coral text-white hover:bg-ocean transition-colors rounded-full"
+              className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
             >
               Join the Invitation List
             </a>
@@ -287,7 +287,7 @@ export default function Home() {
           </p>
           <a
             href="#dates"
-            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-4 bg-coral text-white hover:bg-ivory hover:text-ocean transition-colors rounded-full"
+            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-4 bg-gold text-ocean hover:bg-ivory transition-colors rounded-full"
           >
             Join the Invitation List
           </a>

@@ -57,7 +57,7 @@ export default function JoinModal({ date, onClose }: Props) {
             </p>
             <button
               onClick={onClose}
-              className="mt-6 text-xs font-medium tracking-[0.12em] uppercase px-6 py-2.5 bg-coral text-white hover:bg-ocean transition-colors"
+              className="mt-6 text-xs font-medium tracking-[0.12em] uppercase px-6 py-2.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors"
             >
               Close
             </button>
