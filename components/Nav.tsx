@@ -28,17 +28,14 @@ export default function Nav() {
       <a href="#" className="flex items-center gap-3 no-underline">
         {/* mix-blend-mode removes the grey/white PNG background against both dark and light nav */}
         <span
-          className={`relative rounded-full overflow-hidden shrink-0 block transition-all duration-300 ${
-            scrolled ? 'w-14 h-14' : 'w-18 h-18'
-          }`}
-          style={{ width: scrolled ? '56px' : '72px', height: scrolled ? '56px' : '72px' }}
+          className="relative rounded-full overflow-hidden shrink-0 block transition-all duration-300 bg-white shadow-sm"
+          style={{ width: scrolled ? '56px' : '64px', height: scrolled ? '56px' : '64px' }}
         >
           <Image
             src="/images/image_2.png"
             alt="Vistas & Vibes"
             fill
-            className="object-cover scale-[0.88]"
-            style={{ mixBlendMode: scrolled ? 'multiply' : 'screen' }}
+            className="object-cover scale-[0.92]"
           />
         </span>
         <span
@@ -67,7 +64,7 @@ export default function Nav() {
       {/* CTA */}
       <a
         href="#dates"
-        className={`text-[0.68rem] tracking-[0.16em] uppercase font-medium px-5 py-2 border transition-all duration-300 ${
+        className={`text-[0.68rem] tracking-[0.16em] uppercase font-medium px-5 py-2 border rounded-full transition-all duration-300 ${
           scrolled
             ? 'border-ocean text-ocean hover:bg-coral hover:border-coral hover:text-white'
             : 'border-white/50 text-white hover:bg-coral hover:border-coral'

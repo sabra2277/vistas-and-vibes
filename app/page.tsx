@@ -32,7 +32,7 @@ export default function Home() {
           </p>
           <a
             href="#dates"
-            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-7 py-3.5 bg-coral text-white hover:bg-ocean transition-colors"
+            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-coral text-white hover:bg-ocean transition-colors rounded-full"
           >
             Join the Invitation List
           </a>
@@ -49,7 +49,7 @@ export default function Home() {
           <div className="relative">
             <div className="relative h-[420px] md:h-[560px] overflow-hidden">
               <Image
-                src="/images/image_3.png"
+                src="/images/puerto_hero.jpg"
                 alt="Puerto Escondido, Oaxaca Coast"
                 fill
                 className="object-cover"
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="grid grid-rows-2 h-[500px] md:h-auto md:min-h-[600px]">
             <div className="relative overflow-hidden">
               <Image
-                src="/images/image_1.png"
+                src="/images/stay_pool.jpg"
                 alt="Villa pool with ocean view"
                 fill
                 className="object-cover"
@@ -145,10 +145,10 @@ export default function Home() {
             </div>
             <div className="relative overflow-hidden">
               <Image
-                src="/images/image_3.png"
-                alt="The Oaxaca coast"
+                src="/images/stay_night.jpg"
+                alt="Villa at night"
                 fill
-                className="object-cover object-bottom"
+                className="object-cover object-center"
               />
             </div>
           </div>
@@ -187,7 +187,7 @@ export default function Home() {
             <div>
               <a
                 href="#dates"
-                className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-7 py-3.5 bg-coral text-white hover:bg-ocean transition-colors"
+                className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-coral text-white hover:bg-ocean transition-colors rounded-full"
               >
                 Join the Invitation List
               </a>
@@ -248,7 +248,7 @@ export default function Home() {
             </blockquote>
             <a
               href="#dates"
-              className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-7 py-3.5 bg-coral text-white hover:bg-ocean transition-colors"
+              className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-coral text-white hover:bg-ocean transition-colors rounded-full"
             >
               Join the Invitation List
             </a>
@@ -287,7 +287,7 @@ export default function Home() {
           </p>
           <a
             href="#dates"
-            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-4 bg-coral text-white hover:bg-ivory hover:text-ocean transition-colors"
+            className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-4 bg-coral text-white hover:bg-ivory hover:text-ocean transition-colors rounded-full"
           >
             Join the Invitation List
           </a>
