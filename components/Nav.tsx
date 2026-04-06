@@ -42,7 +42,7 @@ export default function Nav() {
         <a href="#" className="flex items-center gap-2 sm:gap-4 no-underline min-w-0">
           <span
             className={`relative shrink-0 block transition-all duration-300 ${
-              scrolled ? 'w-[48px] h-[48px] sm:w-[90px] sm:h-[90px]' : 'w-[56px] h-[56px] sm:w-[130px] sm:h-[130px]'
+              scrolled ? 'w-[60px] h-[60px] sm:w-[90px] sm:h-[90px]' : 'w-[80px] h-[80px] sm:w-[130px] sm:h-[130px]'
             }`}
           >
             <Image
@@ -55,8 +55,8 @@ export default function Nav() {
           <span
             className={`font-heading italic font-light tracking-wide transition-all duration-400 ${
               scrolled
-                ? 'text-ocean text-lg sm:text-3xl'
-                : 'text-white text-xl sm:text-4xl drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]'
+                ? 'text-ocean text-2xl sm:text-3xl'
+                : 'text-white text-2xl sm:text-4xl drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]'
             }`}
           >
             Vistas &amp; Vibes
