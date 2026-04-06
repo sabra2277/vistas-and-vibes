@@ -20,10 +20,11 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close mobile menu on scroll
+  // Lock body scroll when menu is open
   useEffect(() => {
-    if (menuOpen && scrolled) setMenuOpen(false)
-  }, [scrolled, menuOpen])
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
 
   const linkClass = `text-[0.7rem] tracking-[0.18em] uppercase font-medium transition-colors duration-250 ${
     scrolled ? 'text-text-soft hover:text-coral' : 'text-white/70 hover:text-coral'
@@ -92,43 +93,64 @@ export default function Nav() {
             className="md:hidden p-1.5 rounded-sm transition-colors"
             aria-label="Toggle menu"
           >
-            {menuOpen ? (
-              <svg className={`w-6 h-6 ${scrolled ? 'text-ocean' : 'text-white'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className={`w-6 h-6 ${scrolled || menuOpen ? 'text-ocean' : 'text-white'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {menuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className={`w-6 h-6 ${scrolled ? 'text-ocean' : 'text-white'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
+              )}
+            </svg>
           </button>
         </div>
       </nav>
 
       {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-[299] bg-ivory/98 backdrop-blur-md pt-28 px-8 md:hidden">
-          <nav className="flex flex-col gap-6">
-            {navLinks.map((l) => (
-              <a
-                key={l.label}
-                href={l.href}
-                onClick={() => setMenuOpen(false)}
-                className="font-heading text-2xl text-ocean hover:text-coral transition-colors"
-              >
-                {l.label}
-              </a>
-            ))}
-            <div className="pt-4 border-t border-ivory-deep">
-              <a
-                href="#dates"
-                onClick={() => setMenuOpen(false)}
-                className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
-              >
-                Join the Invitation List
-              </a>
-            </div>
-          </nav>
+        <div
+          className="fixed inset-0 z-[299] md:hidden"
+          onClick={() => setMenuOpen(false)}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-ivory/98 backdrop-blur-md" />
+
+          {/* Menu content */}
+          <div
+            className="relative flex flex-col items-center justify-center h-full px-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="absolute top-6 right-5 p-2 text-ocean/50 hover:text-ocean transition-colors"
+              aria-label="Close menu"
+            >
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <nav className="flex flex-col items-center gap-7">
+              {navLinks.map((l) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="font-heading text-3xl text-ocean hover:text-coral transition-colors"
+                >
+                  {l.label}
+                </a>
+              ))}
+              <div className="mt-4">
+                <a
+                  href="#dates"
+                  onClick={() => setMenuOpen(false)}
+                  className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
+                >
+                  Join the Invitation List
+                </a>
+              </div>
+            </nav>
+          </div>
         </div>
       )}
     </>
