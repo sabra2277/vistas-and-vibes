@@ -59,11 +59,11 @@ export default function Home() {
           </div>
 
           {/* Two-column: image + copy */}
-          <div className="grid md:grid-cols-2 gap-16 items-start mb-20">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             <div className="relative h-[420px] md:h-[520px] overflow-hidden">
               <Image
-                src="/images/image_3.png"
-                alt="Villa terrace overlooking the Pacific"
+                src="/images/puerto_hero.jpg"
+                alt="Puerto Escondido, Oaxaca Coast"
                 fill
                 className="object-cover"
               />
@@ -87,23 +87,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* Second image row */}
-          <div className="relative h-[300px] md:h-[400px] overflow-hidden">
-            <Image
-              src="/images/puerto_hero.jpg"
-              alt="Pacific coastline at golden hour"
-              fill
-              className="object-cover"
-            />
-          </div>
         </div>
       </section>
 
       {/* ── THE EXPERIENCE ─────────────────────────────────────────────────── */}
       <section className="bg-ivory-mid py-24 px-6">
         <div className="max-w-[1100px] mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-start mb-16">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
               <p className="text-sm tracking-[0.14em] uppercase font-semibold text-gold mb-5">
                 The Experience
@@ -142,35 +132,30 @@ export default function Home() {
               </ul>
             </div>
           </div>
-
-          {/* Two images side by side */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative h-[260px] md:h-[360px] overflow-hidden">
-              <Image
-                src="/images/image_4.png"
-                alt="Sunset from the villa terrace"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-[260px] md:h-[360px] overflow-hidden">
-              <Image
-                src="/images/image_6.png"
-                alt="Relaxing at the villa"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
       {/* ── THE STAY ───────────────────────────────────────────────────────── */}
-      <section className="bg-ivory py-0" id="stay">
-        <div className="grid md:grid-cols-2">
-          {/* Images — stacked */}
-          <div className="grid grid-rows-2 h-[500px] md:h-auto md:min-h-[600px]">
-            <div className="relative overflow-hidden">
+      <section className="bg-ivory py-24 px-6" id="stay">
+        <div className="max-w-[1100px] mx-auto">
+          {/* Header + first image */}
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
+            <div>
+              <p className="text-sm tracking-[0.14em] uppercase font-semibold text-gold mb-5">
+                The stay: a private sanctuary
+              </p>
+              <h2 className="font-heading text-4xl md:text-5xl text-ocean leading-tight mb-3">
+                The kind of place
+              </h2>
+              <p className="font-heading italic text-ocean/60 text-xl md:text-2xl font-light mb-6">
+                you don&apos;t want to leave.
+              </p>
+              <div className="w-12 h-px bg-gold mb-7" />
+              <p className="text-text-soft text-base leading-relaxed font-light">
+                Our oceanfront villa on the Oaxaca coast is the kind of place you never want to leave. Featuring private king suites — each with its own ensuite bathroom — it&apos;s designed for you to fully unwind in total privacy.
+              </p>
+            </div>
+            <div className="relative h-[360px] md:h-[440px] overflow-hidden">
               <Image
                 src="/images/stay_pool.jpg"
                 alt="Villa pool with ocean view"
@@ -178,7 +163,11 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <div className="relative overflow-hidden">
+          </div>
+
+          {/* Second image + details */}
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="relative h-[360px] md:h-[440px] overflow-hidden order-2 md:order-1">
               <Image
                 src="/images/stay_night.jpg"
                 alt="Villa at night"
@@ -186,40 +175,24 @@ export default function Home() {
                 className="object-cover object-center"
               />
             </div>
-          </div>
-
-          {/* Content */}
-          <div className="px-10 md:px-16 py-20 flex flex-col justify-center">
-            <p className="text-sm tracking-[0.14em] uppercase font-semibold text-gold mb-5">
-              The stay: a private sanctuary
-            </p>
-            <h2 className="font-heading text-2xl md:text-3xl text-ocean leading-tight mb-5 font-light italic">
-              The kind of place you don&apos;t want to leave.
-            </h2>
-            <div className="w-12 h-px bg-gold mb-7" />
-            <div className="space-y-4 text-text-soft text-base leading-relaxed font-light mb-8">
-              <p>
-                Our oceanfront villa on the Oaxaca coast is the kind of place you never want to leave. Featuring private king suites — each with its own ensuite bathroom — it&apos;s designed for you to fully unwind in total privacy.
-              </p>
-              <p>
+            <div className="order-1 md:order-2">
+              <p className="text-text-soft text-base leading-relaxed font-light mb-8">
                 It&apos;s the kind of place where you wake up slowly, moving between sun and shade without ever feeling crowded. With open-air living spaces, a shimmering pool, and a jacuzzi, it&apos;s social when you want it and peaceful when you don&apos;t.
               </p>
-            </div>
-            <ul className="space-y-3 mb-10">
-              {[
-                'Private King Suite + Ensuite Bath',
-                'Ocean Views from Every Room',
-                'Chef-Prepared Fresh Breakfast & Lunch',
-                'Pool, Jacuzzi & Private Bar',
-                'Intimate Small Group Setting',
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-text font-light">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div>
+              <ul className="space-y-3 mb-10">
+                {[
+                  'Private King Suite + Ensuite Bath',
+                  'Ocean Views from Every Room',
+                  'Chef-Prepared Fresh Breakfast & Lunch',
+                  'Pool, Jacuzzi & Private Bar',
+                  'Intimate Small Group Setting',
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-sm text-text font-light">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <a
                 href="#dates"
                 className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
