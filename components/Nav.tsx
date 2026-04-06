@@ -26,21 +26,24 @@ export default function Nav() {
     >
       {/* Brand */}
       <a href="#" className="flex items-center gap-3 no-underline">
+        {/* mix-blend-mode removes the grey/white PNG background against both dark and light nav */}
         <span
           className={`relative rounded-full overflow-hidden shrink-0 block transition-all duration-300 ${
-            scrolled ? 'w-11 h-11' : 'w-14 h-14'
+            scrolled ? 'w-14 h-14' : 'w-18 h-18'
           }`}
+          style={{ width: scrolled ? '56px' : '72px', height: scrolled ? '56px' : '72px' }}
         >
           <Image
             src="/images/image_2.png"
             alt="Vistas & Vibes"
             fill
             className="object-cover scale-[0.88]"
+            style={{ mixBlendMode: scrolled ? 'multiply' : 'screen' }}
           />
         </span>
         <span
           className={`font-heading tracking-wide transition-all duration-400 hidden sm:block ${
-            scrolled ? 'text-ocean text-xl' : 'text-white text-2xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]'
+            scrolled ? 'text-ocean text-2xl' : 'text-white text-3xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]'
           }`}
         >
           Vistas &amp; Vibes

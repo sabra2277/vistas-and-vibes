@@ -19,10 +19,10 @@ export default function Marquee() {
         {all.map((item, i) => (
           <span
             key={i}
-            className="whitespace-nowrap text-[0.7rem] tracking-[0.2em] uppercase font-medium text-white/70 px-8"
+            className="whitespace-nowrap text-[0.7rem] tracking-[0.2em] uppercase font-medium text-white/70 px-5"
           >
             {item}
-            <span className="text-gold mx-4">✦</span>
+            <span className="text-gold mx-2">✦</span>
           </span>
         ))}
       </div>
