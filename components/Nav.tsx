@@ -20,15 +20,16 @@ export default function Nav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-[300] flex items-center justify-between transition-all duration-400 ${
         scrolled
-          ? 'bg-ivory/96 backdrop-blur-lg shadow-[0_1px_0_rgba(30,58,82,0.07)] px-[2.8rem] py-3'
-          : 'bg-transparent px-[2.8rem] py-5'
+          ? 'bg-ivory/96 backdrop-blur-lg shadow-[0_1px_0_rgba(30,58,82,0.07)] px-4 sm:px-[2.8rem] py-3'
+          : 'bg-transparent px-4 sm:px-[2.8rem] py-4 sm:py-5'
       }`}
     >
       {/* Brand */}
-      <a href="#" className="flex items-center gap-4 no-underline">
+      <a href="#" className="flex items-center gap-2 sm:gap-4 no-underline">
         <span
-          className="relative shrink-0 block transition-all duration-300"
-          style={{ width: scrolled ? '90px' : '130px', height: scrolled ? '90px' : '130px' }}
+          className={`relative shrink-0 block transition-all duration-300 ${
+            scrolled ? 'w-[56px] h-[56px] sm:w-[90px] sm:h-[90px]' : 'w-[70px] h-[70px] sm:w-[130px] sm:h-[130px]'
+          }`}
         >
           <Image
             src="/images/image_2.png"
@@ -63,13 +64,14 @@ export default function Nav() {
       {/* CTA */}
       <a
         href="#dates"
-        className={`text-[0.68rem] tracking-[0.16em] uppercase font-medium px-5 py-2.5 rounded-full transition-all duration-300 ${
+        className={`text-[0.6rem] sm:text-[0.68rem] tracking-[0.12em] sm:tracking-[0.16em] uppercase font-medium px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-300 whitespace-nowrap ${
           scrolled
             ? 'bg-gold text-ocean border border-gold hover:bg-ocean hover:text-white hover:border-ocean'
             : 'bg-gold/90 text-ocean border border-gold/0 hover:bg-gold hover:text-ocean'
         }`}
       >
-        Request Your Invitation
+        <span className="hidden sm:inline">Request Your Invitation</span>
+        <span className="sm:hidden">Request Invite</span>
       </a>
     </nav>
   )
