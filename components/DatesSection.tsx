@@ -40,7 +40,7 @@ export default function DatesSection() {
                 onClick={() => setActiveDate(d.id)}
                 className="mt-2 text-left text-sm font-medium text-coral hover:text-ocean transition-colors tracking-wide"
               >
-                Request Your Invitation →
+                Join the Invitation List →
               </button>
             </div>
           ))}

@@ -83,7 +83,7 @@ export default function Nav() {
                 : 'bg-gold/90 text-ocean border border-gold/0 hover:bg-gold hover:text-ocean'
             }`}
           >
-            Request Your Invitation
+            Join the Invitation List
           </a>
 
           {/* Hamburger — visible on mobile only */}
@@ -125,7 +125,7 @@ export default function Nav() {
                 onClick={() => setMenuOpen(false)}
                 className="inline-block text-[0.72rem] tracking-[0.16em] uppercase font-medium px-8 py-3.5 bg-gold text-ocean hover:bg-ocean hover:text-white transition-colors rounded-full"
               >
-                Request Your Invitation
+                Join the Invitation List
               </a>
             </div>
           </nav>
