@@ -12,10 +12,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
     }
 
-    // Notify Alex
-    await resend.emails.send({
-      from: 'Vistas & Vibes <hello@vistasandvibes.co>',
+    // Notify Alex — sent from Resend's default domain (no custom domain needed)
+    const notifyResult = await resend.emails.send({
+      from: 'Vistas & Vibes <onboarding@resend.dev>',
       to: 'alextreyger19@gmail.com',
+      reply_to: email,
       subject: `New invitation list signup — ${date}`,
       html: `
         <p>Hi Alex,</p>
@@ -29,9 +30,14 @@ export async function POST(req: Request) {
       `,
     })
 
+    if (notifyResult.error) {
+      console.error('[Resend notify error]', notifyResult.error)
+      return NextResponse.json({ error: notifyResult.error.message }, { status: 500 })
+    }
+
     // Auto-reply to the person who signed up
-    await resend.emails.send({
-      from: 'Alex at Vistas & Vibes <hello@vistasandvibes.co>',
+    const replyResult = await resend.emails.send({
+      from: 'Vistas & Vibes <onboarding@resend.dev>',
       to: email,
       subject: `You're on the list — Vistas & Vibes`,
       html: `
@@ -57,9 +63,14 @@ export async function POST(req: Request) {
       `,
     })
 
+    if (replyResult.error) {
+      console.error('[Resend auto-reply error]', replyResult.error)
+      // Don't fail the whole request if auto-reply fails
+    }
+
     return NextResponse.json({ ok: true })
   } catch (err) {
     console.error('[Join API error]', err)
-    return NextResponse.json({ error: 'Server error' }, { status: 500 })
+    return NextResponse.json({ error: String(err) }, { status: 500 })
   }
 }
