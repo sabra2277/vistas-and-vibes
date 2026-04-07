@@ -4,9 +4,9 @@ import { useState } from 'react'
 import JoinModal from './JoinModal'
 
 const dates = [
-  { id: 'july',    month: 'Mid-July',     label: 'Mid-July 2025' },
-  { id: 'august',  month: 'Early August', label: 'Early August 2025' },
-  { id: 'october', month: 'Mid-October',  label: 'Mid-October 2025' },
+  { id: 'july',    month: 'Mid-July',     label: 'Mid-July 2026' },
+  { id: 'august',  month: 'Early August', label: 'Early August 2026' },
+  { id: 'october', month: 'Mid-October',  label: 'Mid-October 2026' },
 ]
 
 export default function DatesSection() {
