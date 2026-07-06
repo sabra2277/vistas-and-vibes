@@ -209,10 +209,10 @@ export default function Home() {
         <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="relative h-[420px] md:h-[560px] overflow-hidden">
             <Image
-              src="/images/image_5.png"
+              src="/images/about_alex.jpg"
               alt="Alex on the Oaxaca coast"
               fill
-              className="object-cover object-top"
+              className="object-cover object-center"
             />
           </div>
           <div>
