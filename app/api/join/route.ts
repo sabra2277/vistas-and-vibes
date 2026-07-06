@@ -57,7 +57,7 @@ export async function POST(req: Request) {
           </p>
           <hr style="border:none;border-top:1px solid #e8e0d4;margin:28px 0;" />
           <p style="font-size:12px;color:#aaa;">
-            Questions? Reply to this email or reach us at @VistasandVibesco
+            Questions? Reply to this email.
           </p>
         </div>
       `,
