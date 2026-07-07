@@ -10,9 +10,20 @@ const navLinks = [
   { label: 'Inquire',    href: '#dates' },
 ]
 
-export default function Nav() {
+type NavProps = {
+  /** Small label rendered under the brand name (e.g. "A Jewish Women's Gathering") */
+  sublabel?: string
+  /** When set, adds a "Main Site" link pointing here (e.g. "/") */
+  mainSiteHref?: string
+}
+
+export default function Nav({ sublabel, mainSiteHref }: NavProps = {}) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const links = mainSiteHref
+    ? [...navLinks, { label: 'Main Site', href: mainSiteHref }]
+    : navLinks
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -53,20 +64,31 @@ export default function Nav() {
               className="object-contain"
             />
           </span>
-          <span
-            className={`font-heading italic font-light tracking-wide transition-all duration-400 ${
-              scrolled
-                ? 'text-ocean text-2xl sm:text-3xl'
-                : 'text-white text-2xl sm:text-4xl drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]'
-            }`}
-          >
-            Vistas &amp; Vibes
+          <span className="flex flex-col min-w-0">
+            <span
+              className={`font-heading italic font-light tracking-wide transition-all duration-400 ${
+                scrolled
+                  ? 'text-ocean text-2xl sm:text-3xl'
+                  : 'text-white text-2xl sm:text-4xl drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]'
+              }`}
+            >
+              Vistas &amp; Vibes
+            </span>
+            {sublabel && (
+              <span
+                className={`text-[0.52rem] sm:text-[0.6rem] tracking-[0.16em] uppercase font-medium mt-0.5 transition-colors duration-400 ${
+                  scrolled ? 'text-gold' : 'text-gold-lt drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]'
+                }`}
+              >
+                {sublabel}
+              </span>
+            )}
           </span>
         </a>
 
         {/* Desktop nav links */}
         <ul className="hidden md:flex items-center gap-9 list-none">
-          {navLinks.map((l) => (
+          {links.map((l) => (
             <li key={l.label}>
               <a href={l.href} className={linkClass}>{l.label}</a>
             </li>
@@ -130,7 +152,7 @@ export default function Nav() {
             </button>
 
             <nav className="flex flex-col items-center gap-7">
-              {navLinks.map((l) => (
+              {links.map((l) => (
                 <a
                   key={l.label}
                   href={l.href}

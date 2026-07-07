@@ -74,7 +74,7 @@ const jwFaqs = [
 export default function JewishWomensGathering() {
   return (
     <>
-      <Nav />
+      <Nav sublabel="A Jewish Women's Gathering" mainSiteHref="/" />
 
       {/* ── HERO ───────────────────────────────────────────────────────────── */}
       <section className="relative min-h-svh flex items-end overflow-hidden">
@@ -89,13 +89,13 @@ export default function JewishWomensGathering() {
           <div className="absolute inset-0 bg-gradient-to-t from-ocean/90 via-ocean/40 to-ocean/10" />
         </div>
 
-        <div className="relative z-10 w-full max-w-[1100px] mx-auto px-10 pb-24 md:pb-32">
+        <div className="relative z-10 w-full max-w-[1100px] mx-auto px-10 pt-40 pb-16 md:pb-24">
           <h1 className="font-heading text-5xl md:text-7xl text-white font-light leading-tight mb-5 tracking-wide">
             Come exactly as you are.<br />
             Be among <em>your people.</em>
           </h1>
-          <p className="font-heading text-xl md:text-3xl text-white/80 leading-snug max-w-2xl mb-10 font-light italic">
-            A small-group, five-day gathering on the Oaxaca Coast for Jewish women who want ease, real adventure, the freedom to just be you — and a touch of heimish.
+          <p className="font-heading text-lg md:text-2xl text-white/80 leading-snug max-w-xl mb-10 font-light italic">
+            A small-group, five-day gathering on the Oaxaca Coast for Jewish women who want ease, real adventure, and the freedom to just be you.
           </p>
           <a
             href="#dates"
@@ -397,6 +397,7 @@ export default function JewishWomensGathering() {
             { label: 'The Stay',   href: '#stay' },
             { label: 'About',      href: '#about' },
             { label: 'Inquire',    href: '#dates' },
+            { label: 'Main Site',  href: '/' },
           ].map((l) => (
             <a key={l.label} href={l.href} className="hover:text-ivory/70 transition-colors">
               {l.label}
