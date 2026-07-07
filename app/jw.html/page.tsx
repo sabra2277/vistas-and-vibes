@@ -95,7 +95,7 @@ export default function JewishWomensGathering() {
             Be among <em>your people.</em>
           </h1>
           <p className="font-heading text-lg md:text-2xl text-white/80 leading-snug max-w-xl mb-10 font-light italic">
-            A small-group, five-day gathering on the Oaxaca Coast for Jewish women who want ease, real adventure, and the freedom to just be you.
+            A small-group, five-day gathering on the Oaxaca Coast for Jewish women who want ease, real adventure, and the freedom to just be you
           </p>
           <a
             href="#dates"
