@@ -18,9 +18,9 @@ const cormorant = Cormorant_Garamond({
 })
 
 const ogImage = {
-  url: '/images/stay_pool.jpg',
-  width: 2058,
-  height: 1071,
+  url: '/images/og_thumb.jpg',
+  width: 500,
+  height: 500,
   alt: 'The private beachfront villa and infinity pool on the Oaxaca coast',
 }
 
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     images: [ogImage],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Vistas & Vibes — Your Kind of Trip on the Oaxaca Coast',
     description:
       'A private beachfront villa. Curated freedom for adventurous women. Travel solo, never alone.',
