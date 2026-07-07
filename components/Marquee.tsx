@@ -1,4 +1,4 @@
-const items = [
+const defaultItems = [
   'Travel solo, never alone',
   'Not a retreat. Your kind of trip',
   'Curated freedom for adventurous women',
@@ -6,7 +6,7 @@ const items = [
   'Luxury without effort. Connection without pressure',
 ]
 
-export default function Marquee() {
+export default function Marquee({ items = defaultItems }: { items?: string[] }) {
   // Duplicate items so the animation loops seamlessly
   const all = [...items, ...items]
 

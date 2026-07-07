@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 
-const faqs = [
+type FAQItem = { q: string; a: string }
+
+const defaultFaqs: FAQItem[] = [
   {
     q: 'Do I need to be "good" at yoga or surfing to join?',
     a: 'Absolutely not. There is no performance energy here. Whether you\'ve been surfing for years or are venturing onto a board for the first time, you\'ll find your rhythm. The goal isn\'t to be "good"—it\'s to feel the salt on your skin and the joy of a new discovery. If you\'d rather spend that hour with a book by the pool, that\'s your adventure, too.',
@@ -25,12 +27,12 @@ const faqs = [
   },
 ]
 
-export default function FAQ() {
+export default function FAQ({ items = defaultFaqs }: { items?: FAQItem[] }) {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
     <div className="divide-y divide-ivory-deep">
-      {faqs.map((faq, i) => (
+      {items.map((faq, i) => (
         <div key={i} className={`faq-item ${open === i ? 'open' : ''}`}>
           <button
             className="w-full flex items-center justify-between gap-4 py-5 text-left"
