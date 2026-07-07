@@ -17,17 +17,34 @@ const cormorant = Cormorant_Garamond({
   display: 'swap',
 })
 
+const ogImage = {
+  url: '/images/stay_pool.jpg',
+  width: 2058,
+  height: 1071,
+  alt: 'The private beachfront villa and infinity pool on the Oaxaca coast',
+}
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://vistasandvibes.com'),
   title: 'Vistas & Vibes — A Curated Adventure on the Oaxaca Coast',
   description:
-    'Not a retreat. A curated adventure — elevated, indulgent, and thoughtfully designed for you.',
+    'Not a retreat. Your kind of trip — a curated adventure for women, in a private beachfront villa on the Oaxaca coast. Travel solo, never alone.',
   openGraph: {
-    title: 'Vistas & Vibes',
-    description: 'Not a retreat. A curated adventure.',
-    url: 'https://vistasandvibes.co',
+    title: 'Vistas & Vibes — Your Kind of Trip on the Oaxaca Coast',
+    description:
+      'A private beachfront villa. Curated freedom for adventurous women. Luxury without effort, connection without pressure — travel solo, never alone.',
+    url: 'https://vistasandvibes.com',
     siteName: 'Vistas & Vibes',
     locale: 'en_US',
     type: 'website',
+    images: [ogImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Vistas & Vibes — Your Kind of Trip on the Oaxaca Coast',
+    description:
+      'A private beachfront villa. Curated freedom for adventurous women. Travel solo, never alone.',
+    images: [ogImage],
   },
 }
 

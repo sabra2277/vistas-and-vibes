@@ -26,7 +26,7 @@ export async function POST(req: Request) {
           <tr><td style="padding:4px 12px 4px 0;color:#6a6260;font-size:14px;">Email</td><td style="font-size:14px;font-weight:600;">${email}</td></tr>
           <tr><td style="padding:4px 12px 4px 0;color:#6a6260;font-size:14px;">Trip date</td><td style="font-size:14px;font-weight:600;">${date}</td></tr>
         </table>
-        <p style="margin-top:16px;color:#6a6260;font-size:13px;">Sent from vistasandvibes.co</p>
+        <p style="margin-top:16px;color:#6a6260;font-size:13px;">Sent from vistasandvibes.com</p>
       `,
     })
 
