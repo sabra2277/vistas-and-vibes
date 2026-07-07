@@ -307,7 +307,7 @@ export default function JewishWomensGathering() {
       {/* ── ABOUT ──────────────────────────────────────────────────────────── */}
       <section className="bg-ivory-mid py-24 px-6" id="about">
         <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div className="relative h-[420px] md:h-[560px] overflow-hidden">
+          <div className="relative h-[420px] md:h-[560px] overflow-hidden order-2 md:order-1">
             <Image
               src="/images/about_alex.jpg"
               alt="Alex on the Oaxaca coast"
@@ -315,7 +315,7 @@ export default function JewishWomensGathering() {
               className="object-cover object-center"
             />
           </div>
-          <div>
+          <div className="order-1 md:order-2">
             <p className="text-sm tracking-[0.14em] uppercase font-semibold text-gold mb-5">
               About me
             </p>

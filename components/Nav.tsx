@@ -67,17 +67,19 @@ export default function Nav({ sublabel, mainSiteHref }: NavProps = {}) {
           <span className="flex flex-col min-w-0">
             <span
               className={`font-heading italic font-light tracking-wide transition-all duration-400 ${
-                scrolled
-                  ? 'text-ocean text-2xl sm:text-3xl'
-                  : 'text-white text-2xl sm:text-4xl drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]'
+                scrolled ? 'text-ocean' : 'text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.35)]'
+              } ${
+                sublabel
+                  ? (scrolled ? 'text-3xl sm:text-4xl' : 'text-3xl sm:text-5xl')
+                  : (scrolled ? 'text-2xl sm:text-3xl' : 'text-2xl sm:text-4xl')
               }`}
             >
               Vistas &amp; Vibes
             </span>
             {sublabel && (
               <span
-                className={`text-[0.52rem] sm:text-[0.6rem] tracking-[0.16em] uppercase font-medium mt-0.5 transition-colors duration-400 ${
-                  scrolled ? 'text-gold' : 'text-gold-lt drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]'
+                className={`text-[0.66rem] sm:text-[0.8rem] tracking-[0.15em] uppercase font-semibold mt-1 transition-colors duration-400 ${
+                  scrolled ? 'text-gold' : 'text-gold-lt drop-shadow-[0_1px_4px_rgba(0,0,0,0.45)]'
                 }`}
               >
                 {sublabel}
