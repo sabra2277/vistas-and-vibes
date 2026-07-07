@@ -25,14 +25,14 @@ const ogImage = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vistasandvibes.com'),
+  metadataBase: new URL('https://www.vistasandvibes.com'),
   title: 'Vistas & Vibes — A Curated Adventure on the Oaxaca Coast',
   description:
     'Not a retreat. Your kind of trip — a curated adventure for women, in a private beachfront villa on the Oaxaca coast. Travel solo, never alone.',
   openGraph: {
     title: 'Vistas & Vibes — Your Kind of Trip on the Oaxaca Coast',
     description: 'Not a retreat. A curated adventure.',
-    url: 'https://vistasandvibes.com',
+    url: 'https://www.vistasandvibes.com',
     siteName: 'Vistas & Vibes',
     locale: 'en_US',
     type: 'website',
